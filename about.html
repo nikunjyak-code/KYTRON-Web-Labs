@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://unpkg.com/scrollreveal"></script>
+<title>About Us | KYTRON</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:url("image4.jpg") no-repeat center center/cover;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* Dark overlay */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    z-index:-1;
+}
+
+/* Navbar */
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(18px);
+    z-index: 10;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:cyan;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:cyan;
+}
+
+/* Default desktop */
+.menu-icon{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile view */
+@media (max-width:600px){
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #2f4f5f;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-links li{
+        margin: 10px 0;
+    }
+    
+    .nav-links a:hover{
+      color: cyan !important;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+}
+
+/* Main Section */
+.about-container{
+    margin-top:120px;
+    padding:60px 8%;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+}
+
+.about-container h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.about-container p{
+    font-size:18px;
+    color:#eaeaea;
+    margin-bottom:50px;
+}
+
+/* Glass Card */
+.glass-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    margin:20px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+.glass-card h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.glass-card h2{
+    font-size:28px;
+    margin-bottom:15px;
+    color:cyan;
+}
+
+.glass-card p{
+    font-size:18px;
+    line-height:1.6;
+    color:#eaeaea;
+}
+
+/* Highlight */
+.highlight{
+    color:cyan;
+    font-weight:bold;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    .about-container{
+        padding:40px 5%;
+    }
+}
+
+.footer{
+    width: 100%;
+    margin-bottom:0px;
+    padding:40px 10%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    text-align:center;
+}
+
+.footer h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.footer h3 span{
+    color:cyan;
+}
+
+.footer p{
+    color:#eaeaea;
+    margin-bottom:15px;
+}
+
+.footer-links{
+    margin-bottom:20px;
+}
+
+.footer-links a{
+    margin:0 10px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:cyan;
+}
+
+.copyright{
+    font-size:14px;
+    opacity:0.7;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo"><span>KYTRON</span> Web Labs</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="about-container">
+    <h1>About Us</h1>
+    <p>Not just building websites — building digital identities.</p>
+
+    <div class="glass-card">
+        <h1>About <span class="highlight">KYTRON Web Labs</span></h1>
+        <p>
+            At <span class="highlight">KYTRON Web Labs</span>, we transform ideas into powerful digital experiences.<br>
+We specialize in crafting modern, fast, and visually stunning websites that not only look beautiful but perform flawlessly.<br><br>
+Technology for us is not just about writing code — it’s about solving problems, creating impact, and building something meaningful.
+        </p>
+    </div>
+    
+    <div class="glass-card">
+        <h2>Who We Are</h2>
+        <p>
+            We are a passionate digital development team focused on innovation and performance.<br>
+Our work combines creativity with technology to build web solutions that are clean, scalable, and future-ready.<br><br>
+From simple business websites to custom web solutions, every project is built with precision and attention to detail.<br><br>
+We believe that great design and powerful functionality should always go hand in hand.
+        </p>
+    </div>
+
+    <div class="glass-card">
+        <h2>Our Misson</h2>
+        <p>
+            To design and develop secure, high-performance digital solutions that help businesses grow confidently in the online world.<br><br>
+We aim to create experiences that are fast, user-friendly, and built to last.
+        </p>
+    </div>
+
+    <div class="glass-card">
+        <h2>Our Vision</h2>
+        <p>
+            To become a trusted digital innovation lab delivering next-generation web solutions for startups, creators, and businesses worldwide.<br><br>
+We envision a future where technology empowers ideas without limits.
+        </p>
+    </div>
+    
+    <div class="glass-card">
+        <h2>Why Choose KYTRON</h2>
+        <p>
+            At KYTRON, we don’t believe in ordinary work. Every project is approached with strategy, creativity, and technical excellence.<br><br>
+Here’s what makes us different:<br><br>
+✔ Clean & Modern Design<br>
+✔ Performance-Driven Development<br>
+✔ Secure & Scalable Architecture<br>
+✔ User-Focused Approach<br>
+✔ Passion for Innovation<br><br>
+We don’t just deliver projects — we build long-term digital value.
+        </p>
+    </div>
+
+    <div class="glass-card">
+        <h2>Small Call To Action</h2>
+        <p>
+            Ready to create something impactful?<br><br>
+Let’s build your next digital experience together.
+        </p>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <h3><span>KYTRON</span> Web Labs</h3>
+        <p>Crafting modern digital experiences with innovation and precision.</p>
+        
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 KYTRON Web Labs. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+<script>
+ScrollReveal().reveal('.glass-card, .service-card, .glass-box', {
+    distance: '300px',
+    duration: 2000,
+    easing: 'ease-in-out',
+    origin: 'bottom',
+    interval: 600
+});
+</script>
+
+<script>
+function toggleMenu(){
+   var menu = document.getElementById("navLinks");
+
+   if(menu.style.display === "flex"){
+       menu.style.display = "none";
+   } else {
+       menu.style.display = "flex";
+   }
+}
+</script>
+
+</body>
+</html>
